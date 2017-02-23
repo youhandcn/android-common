@@ -11,3 +11,14 @@ dependencies {
     compile 'org.aspectj:aspectjrt:1.8.9'
     compile 'org.aspectj:aspectjtools:1.8.9'
 }
+
+group = 'com.jiang.aspectjplugin'
+version = '1.0.0'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri("file://home/$System.env.USER/.m2/repository"))
+        }
+    }
+}

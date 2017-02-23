@@ -1,8 +1,15 @@
 apply plugin: 'java'
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
 
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    dependencies {
+        classpath 'com.jiang.aspectjplugin:aspectjplugin:1.0.0'
+    }
 }
-
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
+
+//apply plugin: 'aspectj.plugin'
