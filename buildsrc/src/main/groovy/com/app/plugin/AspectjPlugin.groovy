@@ -1,3 +1,5 @@
+package com.app.plugin
+
 import org.aspectj.bridge.IMessage
 import org.aspectj.bridge.MessageHandler
 import org.aspectj.tools.ajc.Main
@@ -5,7 +7,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.compile.JavaCompile
 
-public class Aspectj implements Plugin<Project> {
+public class AspectjPlugin implements Plugin<Project> {
 
     @Override
     void apply(Project project) {
@@ -14,9 +16,9 @@ public class Aspectj implements Plugin<Project> {
         }
         final def log = project.logger
         log.error("=================================")
-        log.error("Aspectj 开始注入代码到目标class文件")
+        log.error("AspectjPlugin 开始注入代码到目标class文件")
         log.error("==================================")
-        android.libraryVariants.all { variant ->
+        project.android.applicationVariants.all { variant ->
             JavaCompile javaCompile = variant.javaCompile
             javaCompile.doLast {
                 String[] args = ["-showWeaveInfo",
