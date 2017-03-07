@@ -2,7 +2,7 @@
     package="com.example.util">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:supportsRtl="true">
 
     </application>

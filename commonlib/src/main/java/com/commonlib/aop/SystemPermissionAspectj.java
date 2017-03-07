@@ -1,13 +1,8 @@
 package com.commonlib.aop;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.commonlib.CommonLib;
 import com.commonlib.annotation.aspectj.Permission;
-import com.commonlib.utils.MPermissionUtils;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
