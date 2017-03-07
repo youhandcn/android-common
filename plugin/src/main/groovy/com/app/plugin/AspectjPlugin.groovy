@@ -27,8 +27,7 @@ public class AspectjPlugin implements Plugin<Project> {
                                  "-aspectpath", javaCompile.classpath.asPath,
                                  "-d", javaCompile.destinationDir.toString(),
                                  "-classpath", javaCompile.classpath.asPath,
-                                 "-bootclasspath", plugin.project.android.bootClasspath.join(
-                        File.pathSeparator)]
+                                 "-bootclasspath", project.android.bootClasspath.join(File.pathSeparator)]
 
                 MessageHandler handler = new MessageHandler(true);
                 new Main().run(args, handler)
